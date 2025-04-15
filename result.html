@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url('static/bg.jpg');
+            background-size: cover;
+            text-align: center;
+            font-size: 30px; /* Big text */
+            color: white;
+        }
+
+        .container {
+            margin-top: 15%;
+        }
+
+        input, button {
+            font-size: 25px; /* Bigger form elements */
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Make all links white */
+        a {
+            color: white;
+            text-decoration: none; /* Optional: removes underline */
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Adds underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Visualization Result</h2>
+    <img src="{{ url_for('static', filename='uploads/' + visualization_image) }}" alt="Visualization">
+    <br>
+    <a href="{{ url_for('upload') }}">Upload Another Image</a>
+</body>
+</html>
